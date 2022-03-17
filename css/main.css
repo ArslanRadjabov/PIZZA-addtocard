@@ -67,7 +67,7 @@ img {
 }
 
 .hero__main {
-  padding: 0 50px;
+  padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,9 +94,11 @@ img {
 }
 
 .hero__menu {
+  width: 50%;
   overflow-y: scroll;
   padding: 10px 50px;
   background-color: #fff;
+  border-radius: 10px 0 0 10px;
 }
 
 .menu__item {
@@ -184,7 +186,6 @@ img {
   scrollbar-color: #f9a20b #9bb4bb;
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 7px;
 }
@@ -197,6 +198,18 @@ img {
   background-color: #f9a20b;
   border-radius: 21px;
   border: 0px solid #e70808;
+}
+
+.price {
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  gap: 100px;
+}
+
+.price p {
+  font-weight: 700;
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 576px) {
