@@ -26,39 +26,48 @@
           <div class="hero__menu col-md-6 col-xs-12">
             <h2 class="hero__title">TO Go Menu</h2>
             <ul class="hero__list menu">
-              <li class="menu__item">
-                <img class="menu__img" src="https://quizzical-murdock-fa5953.netlify.app/img/pizza1.png" alt="piiza1">
-                <h4 class="menu__title">pepperoni</h4>
-                <span class="menu__cost" id="menu__cost" >2.23</span>
-                <button class="menu__btn">add to card</button>
-              </li>
-              <li class="menu__item">
-                <img class="menu__img" src="https://quizzical-murdock-fa5953.netlify.app/img/pizza3.jpg" alt="piiza1">
-                <h4 class="menu__title">cheesy</h4>
-                <span class="menu__cost" id="menu__cost">5.15</span>
-                <button class="menu__btn">add to card</button>
-              </li>
-              <li class="menu__item">
-                <img class="menu__img" src="https://quizzical-murdock-fa5953.netlify.app/img/pizza2.jpg" alt="">
-                <h4 class="menu__title">Margarita</h4>
-                <span class="menu__cost" id="menu__cost">7.36</span>
-                <button class="menu__btn">add to card</button>
-              </li>
-              <li class="menu__item">
-                <img class="menu__img" src="https://quizzical-murdock-fa5953.netlify.app/img/pizza3.jpg" alt="">
-                <h4 class="menu__title">Hawaiian</h4>
-                <span class="menu__cost" id="menu__cost">8.42</span>
-                <button class="menu__btn">add to card</button>
-              </li>
+              <!-- <li class="menu__item pizza">
+                <img class="pizza__img" src="../img/pizza1.png" alt="pizza" />
+                <div class="pizza__desc">
+                  <p class="pizza__p">Pepperoni</p>
+                  <span class="pizza__price">$2.23</span>
+                  <button class="pizza__btn" onclick="addItem(1)">
+                    Add to Cart
+                  </button>
+                </div>
+              </li> -->
+            
             </ul>
           </div>
           <div class="hero__card card col-md-6 col-xs-12">
             <h2 class="card__title">Your Card</h2>
-            <div class="display">Total price: <span class="total__price"></span></div>
-
-            <div class="card__costs">
-              
+            <ul class="card__list">
+                 <!-- <li class="menu__item pizza cart__item">
+            <img class="pizza__img" src="../img/pizza1.png" alt="pizza" />
+            <div class="pizza__desc">
+              <p class="pizza__p">Pepperoni</p>
+              <span class="pizza__price">$2.23</span>
+              <button class="pizza__btn remove">-</button>
             </div>
+          </li> -->
+            </ul>
+            <div class="price d-flex gap-5">
+              <div class="wrap d-flex ">
+                <p class="price__title">subtotal:</p>
+                <p class="price__amount subtotal" id="subtotal">0</p>
+                <span class="dollar__sign">$</span>
+              </div>
+              <div class="wrap d-flex">
+                <p class="price__title">tax:</p>
+                <p class="price__amount tax">0</p>
+                <span class="dollar__sign">$</span>
+              </div>
+              <div class="wrap d-flex">
+                <p class="price__title">total:</p>
+                <p class="price__amount total">0</p>
+                <span class="dollar__sign">$</span>
+              </div>
+
           </div>
         </div>
       </div>
