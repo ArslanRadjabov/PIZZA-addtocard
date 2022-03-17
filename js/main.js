@@ -61,7 +61,7 @@ let pizzas = [
       if (i == newPizzasArr.length - 1) {
         let li = document.createElement("li");
         li.className = "menu__item pizza cart__item animate__animated animate__flipInX";
-        li.style =  'animation-duration: 1s';
+        li.style =  'animation-duration: 1s ; background-color: rgb(160, 241, 228)';
         li.innerHTML = `
         <img class="pizza__img" src=${newPizzasArr[i].imageUrl} alt="pizza" />
               <div class="pizza__name">
