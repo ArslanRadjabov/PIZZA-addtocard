@@ -96,6 +96,7 @@ let pizzas = [
     for (let i = 0; i < newPizzasArr.length; i++) {
       let li = document.createElement("li");
       li.className = "menu__item pizza cart__item  animate__animated animate__flipInX ";
+      li.style =  'animation-duration: 1s ; background-color: rgb(160, 241, 228)';
       li.innerHTML = `
         <img class="pizza__img" src=${newPizzasArr[i].imageUrl} alt="pizza" />
               <div class="pizza__name">
@@ -117,3 +118,23 @@ let pizzas = [
     
     
 }
+
+// let arr = pizzas;
+// let b =[];
+// let count = arr.length;
+// for (let i = 0; i < arr.length; i++) {
+//     let k = [];
+//     let f = [];
+//     for (let j = 0; j < arr.length; j++) {
+//         if(arr[0]==arr[j]){
+//             k.push(arr[j]);
+//         }
+//         else{
+//             f.push(arr[j])
+        
+//         }
+//     }
+//     arr = f;
+//     if(k != "") b.push(k);   
+// }
+// console.log(b);
