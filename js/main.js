@@ -35,7 +35,7 @@ let pizzas = [
   // left box added
   for (let i = 0; i < pizzas.length; i++) {
     let li = document.createElement("li");
-    li.className = "menu__item pizza";
+    li.className = "menu__item pizza animate__animated  animate__fadeInLeft";
     li.innerHTML = `
         <img class="pizza__img" src=${pizzas[i].imageUrl} alt="pizza" />
               <div class="pizza__name">
@@ -60,14 +60,15 @@ let pizzas = [
     for (let i = 0; i < newPizzasArr.length; i++) {
       if (i == newPizzasArr.length - 1) {
         let li = document.createElement("li");
-        li.className = "menu__item pizza cart__item";
+        li.className = "menu__item pizza cart__item animate__animated animate__flipInX";
+        li.style =  'animation-duration: 1s';
         li.innerHTML = `
         <img class="pizza__img" src=${newPizzasArr[i].imageUrl} alt="pizza" />
               <div class="pizza__name">
                 <p class="pizza__p">${newPizzasArr[i].name}</p>
                 <span class="pizza__price">$${newPizzasArr[i].price}</span>
                 <button class="pizza__btn remove"  onclick='removeItem(${i})'>
-                  -
+                  remove
                 </button>
               </div>
       `;
@@ -94,14 +95,14 @@ let pizzas = [
   
     for (let i = 0; i < newPizzasArr.length; i++) {
       let li = document.createElement("li");
-      li.className = "menu__item pizza cart__item";
+      li.className = "menu__item pizza cart__item  animate__animated animate__flipInX ";
       li.innerHTML = `
         <img class="pizza__img" src=${newPizzasArr[i].imageUrl} alt="pizza" />
               <div class="pizza__name">
                 <p class="pizza__p">${newPizzasArr[i].name}</p>
                 <span class="pizza__price">$${newPizzasArr[i].price}</span>
                 <button class="pizza__btn remove"  onclick='removeItem(${i})'>
-                  -
+                  remove
                 </button>
               </div>
       `;
@@ -109,4 +110,10 @@ let pizzas = [
       elSubTotal.textContent = totalPrice.toFixed(2);
       cartList.appendChild(li);
     }
-  }
+    if (newPizzasArr.length == 0){
+      totalPrice = 0;
+      elSubTotal.textContent = totalPrice.toFixed(2);      
+    }
+    
+    
+}
